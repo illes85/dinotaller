@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DínóTallér™ – Piactér</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf7e0;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+header {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+nav {
+  background: #f0f0f0;
+  padding: 0.5rem;
+  text-align: center;
+}
+nav a {
+  display: inline-block;
+  margin: 0.2rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #81c784;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-size: 1rem;
+}
+nav a:nth-child(2) {
+  background-color: #ffb74d;
+}
+nav a:nth-child(3) {
+  background-color: #4fc3f7;
+}
+nav a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 800px;
+  margin: 1rem auto;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.task-card {
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.task-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.task-info {
+  flex: 1;
+  min-width: 200px;
+}
+
+.task-actions {
+  text-align: right;
+}
+
+.task-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+button:hover {
+  background-color: #45a049;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
+  text-align: center;
+  line-height: 40px;
+  margin-right: 0.2rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.status {
+  font-weight: bold;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+}
+
+.status.szabad {
+  color: #2e7d32;
+  background-color: #c8e6c9;
+}
+
+.status.foglalt {
+  color: #c62828;
+  background-color: #ffcdd2;
+}
+
+.status.reszben {
+  color: #f9a825;
+  background-color: #fff9c4;
+}
+
+@media(max-width: 600px) {
+  .task-card {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .task-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+🦖 DínóTallér™ – Piactér
+</header>
+
+<nav>
+  <a href="piacter.html">🏠 Piactér</a>
+  <a href="admin.html">📝 Admin</a>
+  <a href="profil.html">👤 Profil</a>
+</nav>
+
+<div class="container">
+<h2>Elérhető feladatok</h2>
+
+<div class="task-card">
+  <div class="task-info">
+    <h3>Mosogatás</h3>
+    <p>💰 500 Ft + 5 🪙</p>
+    <p>👥 <span class="avatar">V</span> <span class="avatar">B</span></p>
+    <p>📅 Holnap</p>
+  </div>
+  <div class="task-actions">
+    <span class="status reszben">🟡 1 hely szabad</span>
+    <button>Lecsapok!</button>
+  </div>
+</div>
+
+<div class="task-card">
+  <div class="task-info">
+    <h3>Fűnyírás</h3>
+    <p>💰 1000 Ft + 10 🪙</p>
+    <p>👥 –</p>
+    <p>📅 Ma 19:00</p>
+  </div>
+  <div class="task-actions">
+    <span class="status szabad">🟢 Szabad</span>
+    <button>Lecsapok!</button>
+  </div>
+</div>
+
+<div class="task-card">
+  <div class="task-info">
+    <h3>Porszívózás</h3>
+    <p>💰 200 Ft + 3 🪙</p>
+    <p>👥 <span class="avatar">T</span></p>
+    <p>📅 Ma 18:00</p>
+  </div>
+  <div class="task-actions">
+    <span class="status foglalt">🔒 Foglalt</span>
+    <!-- foglalógomb nincs -->
+  </div>
+</div>
+
+</div>
+
+</body>
+</html>
