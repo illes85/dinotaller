@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<title>Dínóbörze™ Mockup – Mobilbarát</title>
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf7e0;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.task-card {
+  background: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+.task-card h3 {
+  margin: 0.2rem 0;
+}
+button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+button:hover {
+  background-color: #45a049;
+}
+.avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #ddd;
+  display: inline-block;
+  text-align: center;
+  line-height: 30px;
+  margin-right: 0.2rem;
+  font-weight: bold;
+}
+
+/* desktop (800px+) */
+@media (min-width: 800px) {
+  .task-list {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .task-list .task-card {
+    display: table-row;
+    background: white;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .task-list .task-card > div {
+    display: table-cell;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+  }
+  .task-list .task-card h3, .task-list .task-card p, .task-list button {
+    margin: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+🦖 Dínóbörze™ – Task Piactér
+</header>
+
+<div class="container">
+<h2>Elérhető feladatok</h2>
+
+<div class="task-list">
+
+<div class="task-card">
+  <h3>Porszívózás</h3>
+  <p>💰 200 Ft + 3 🪙</p>
+  <p>👥 <span class="avatar">T</span></p>
+  <p>📅 Ma 18:00</p>
+  <p>🔒 Foglalt</p>
+  <button disabled>Foglalva</button>
+</div>
+
+<div class="task-card">
+  <h3>Mosogatás</h3>
+  <p>💰 500 Ft + 5 🪙</p>
+  <p>👥 <span class="avatar">V</span> <span class="avatar">B</span></p>
+  <p>📅 Holnap</p>
+  <p>🟢 1 hely szabad</p>
+  <button>Lecsapok!</button>
+</div>
+
+<div class="task-card">
+  <h3>Fűnyírás</h3>
+  <p>💰 1000 Ft + 10 🪙</p>
+  <p>👥 -</p>
+  <p>📅 Ma 19:00</p>
+  <p>🟢 Szabad</p>
+  <button>Lecsapok!</button>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
