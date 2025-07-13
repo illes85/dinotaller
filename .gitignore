@@ -1,0 +1,15 @@
+# Node modules
+node_modules/
+
+# környezeti változók
+.env
+
+# macOS / Windows szemét
+.DS_Store
+Thumbs.db
+
+# logok
+npm-debug.log*
+
+# adatfájlok (ha a data/ csak teszt)
+data/
